@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stopWatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <div class="time-display stop-watch">
+          <div class="group">
+            <span>{{pad(totalRecode.minutes)[0]}}</span>
+            <span>{{pad(totalRecode.minutes)[1]}}</span>
+          </div>
+          <div class="separator">:</div>
+          <div class="group">
+            <span>{{pad(totalRecode.seconds)[0]}}</span>
+            <span>{{pad(totalRecode.seconds)[1]}}</span>
+          </div>
+          <div class="separator">.</div>
+          <div class="group">
+            <span>{{pad(totalRecode.milliseconds)[0]}}</span>
+            <span>{{pad(totalRecode.milliseconds)[1]}}</span>
+          </div>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-reset" @click="resetTimer">RESET</button>
+          <button
+            class="btn"
+            :class="{
+            'btn-stop': isStart,
+            'btn-start': !isStart
+          }"
+            @click="toggleTimer"
+          >
+            {{isStart ? 'STOP':'START'}}
+          </button>
+          <!-- <button class="btn btn-recode">RECODE</button>
+                <button class="btn btn-stop">STOP</button> -->
+        </div>
+      </main>
+    </div>
+
+    <script type="module">
+      const { createApp, ref, onMounted } = Vue;
+      const pad = (n) => String(n).padStart(2, '0');
+      createApp({
+        setup() {
+          const isStart = ref(false);
+          const INIT_TIME = { minutes: 0, seconds: 0, milliseconds: 0 };
+          const totalRecode = ref({ ...INIT_TIME });
+          let timer = null;
+
+          // 타이머 시작
+          const startTimer = () => {
+            timer = setInterval(() => {
+              //밀리세컨즈 값이 1씩 증가
+              totalRecode.value.milliseconds += 1;
+
+              //ms가 100이 되면 초 증가
+              if (totalRecode.value.milliseconds > 99) {
+                totalRecode.value.milliseconds = 0;
+                totalRecode.value.seconds++;
+              }
+              //60초가 되면 분 증가
+              if (totalRecode.value.seconds > 59) {
+                totalRecode.value.seconds = 0;
+                totalRecode.value.minutes++;
+              }
+            }, 10);
+          };
+
+          // 타이머 시작/정지
+          const toggleTimer = () => {
+            if (isStart.value) {
+              //타이머 초기화
+              clearInterval(timer);
+              timer = null;
+            } else {
+              //타이머 시작
+              startTimer();
+            }
+            //시작 상태값 변경
+            isStart.value = !isStart.value;
+          };
+
+          const resetTimer = () => {
+            // 타이머 초기화
+            clearInterval(timer);
+            timer = null;
+            isStart.value = false;
+            totalRecode.value = { ...INIT_TIME };
+          };
+
+          // 리턴문 추가
+          return {
+            totalRecode,
+            pad,
+            toggleTimer,
+            isStart,
+            resetTimer
+          };
+        }
+      }).mount('#app');
+    </script>
+  </body>
+</html>
