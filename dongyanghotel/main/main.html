@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>DongyangHotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="../css/globals.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+  </head>
+  <body>
+    <header id="top">
+      <div class="site-header">
+        <a href="../main/main.html">
+          <img src="../images/logo.png" alt="동양미래 호텔 로고" class="logo"/>
+        </a>
+        <div class="header-text nanumFont">
+          <h1>동양미래 호텔에 오신 것을 환영합니다</h1>
+          <p>
+            한국의 전통미와 현대적 감각을 겸비하고 있는 라이프스타일 호텔입니다.
+          </p>
+        </div>
+      </div>
+      <div class="nav-bar nanumFont">
+        <div class="nav-menu">
+          <a href="../about/about-intro.html">호텔소개</a>
+          <div class="dropdown-inner">
+            <a href="../about/about-intro.html">동양호텔소개</a>
+            <a href="../about/about-info.html">호텔정보</a>
+            <a href="../about/about-location.html">오시는길</a>
+          </div>
+        </div>
+
+        <div class="nav-menu">
+          <a href="../rooms/rooms-standard.html">객실소개</a>
+          <div class="dropdown-inner">
+            <a href="../rooms/rooms-standard.html">스탠다드</a>
+            <a href="../rooms/rooms-executive.html">이그제큐티브</a>
+            <a href="../rooms/rooms-suite.html">스위트</a>
+          </div>
+        </div>
+
+        <div class="nav-menu">
+          <a href="../facility/facility-dining.html">편의시설</a>
+          <div class="dropdown-inner">
+            <a href="../facility/facility-dining.html">다이닝</a>
+            <a href="../facility/facility-lifestyle.html">라이프스타일</a>
+            <a href="../facility/facility-wedding.html">웨딩 & 연회</a>
+          </div>
+        </div>
+
+        <div class="nav-menu">
+          <a href="../special/special-package.html">스페셜오퍼</a>
+          <div class="dropdown-inner">
+            <a href="../special/special-package.html">객실 패키지</a>
+            <a href="../special/special-event.html">이벤트</a>
+          </div>
+        </div>
+
+        <div class="nav-menu no-dropdown">
+          <a href="#popup">이용문의</a>
+          <div class="dropdown-inner"></div>
+        </div>
+        <div class="dropdown-bar"></div>
+      </div>
+    </header>
+
+    <div id="popup" class="overlay">
+      <div class="popup-box">
+        <a href="#" class="close">&times;</a>
+        <iframe
+          src="../inquiry/inquiry.html"
+          width="500px"
+          height="800px"
+          scrolling="no"
+          frameborder="0"
+          allowtransparency="true"
+          title="호텔 이용 문의"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <main>
+      <div id="wrapper" class="titleFont" style="font-size: 15px">
+        <!-- 자동 슬라이더 -->
+        <div class="slider auto">
+          <ul class="slides">
+            <li>
+              <a href="../about/about-intro.html">
+                <img src="../images/main/mainHotel1.png" alt="about-intro 1"/>
+              </a>
+            </li>
+            <li>
+              <a href="../about/about-intro.html">
+                <img src="../images/main/mainHotel2.png" alt="about-intro 2"/>
+              </a>
+            </li>
+            <li>
+              <a href="../about/about-intro.html">
+                <img src="../images/main/mainHotel3.png" alt="about-intro 3"/>
+              </a>
+            </li>
+            <li>
+              <a href="../about/about-intro.html">
+                <img src="../images/main/mainHotel1.png" alt="about-intro 4"/>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <h1>패키지 및 이벤트</h1>
+        <!-- 수동 슬라이더 1 -->
+        <div class="manual-slider">
+          <input type="radio" id="man1-1" name="man1" checked/>
+          <input type="radio" id="man1-2" name="man1"/>
+          <input type="radio" id="man1-3" name="man1"/>
+
+          <div class="viewport">
+            <ul class="slides">
+              <li>
+                <a href="../special/special-event.html">
+                  <img src="../images/main/mainEvent1.png" alt="special-event 1-1"/>
+                </a>
+              </li>
+              <li>
+                <a href="../special/special-event.html">
+                  <img src="../images/main/mainEvent2.png" alt="special-event 1-2"/>
+                </a>
+              </li>
+              <li>
+                <a href="../special/special-event.html">
+                  <img src="../images/main/mainEvent3.png" alt="special-event 1-3"/>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-dots">
+            <label class="dot" for="man1-1"></label>
+            <label class="dot" for="man1-2"></label>
+            <label class="dot" for="man1-3"></label>
+          </div>
+
+          <!-- 슬라이드1 화살표 -->
+          <label class="arrow prev prev1" for="man1-3">〈</label>
+          <label class="arrow next next1" for="man1-2">〉</label>
+          <label class="arrow prev prev2" for="man1-1">〈</label>
+          <label class="arrow next next2" for="man1-3">〉</label>
+          <label class="arrow prev prev3" for="man1-2">〈</label>
+          <label class="arrow next next3" for="man1-1">〉</label>
+        </div>
+
+        <h1>객실 소개</h1>
+        <!-- 수동 슬라이더 2 -->
+        <div class="manual-slider">
+          <input type="radio" id="man2-1" name="man2" checked/>
+          <input type="radio" id="man2-2" name="man2"/>
+          <input type="radio" id="man2-3" name="man2"/>
+
+          <div class="viewport">
+            <ul class="slides">
+              <li>
+                <a href="../rooms/rooms-suite.html">
+                  <img src="../images/main/mainRooms1.png" alt="rooms-suite 1"/>
+                </a>
+              </li>
+              <li>
+                <a href="../rooms/rooms-executive.html">
+                  <img src="../images/main/mainRooms2.png" alt="rooms-executive 2"/>
+                </a>
+              </li>
+              <li>
+                <a href="../rooms/rooms-standard.html">
+                  <img src="../images/main/mainRooms3.png" alt="rooms-standard 3"/>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-dots">
+            <label class="dot" for="man2-1"></label>
+            <label class="dot" for="man2-2"></label>
+            <label class="dot" for="man2-3"></label>
+          </div>
+
+          <!-- 슬라이드2 화살표 -->
+          <label class="arrow prev prev4" for="man2-3">〈</label>
+          <label class="arrow next next4" for="man2-2">〉</label>
+          <label class="arrow prev prev5" for="man2-1">〈</label>
+          <label class="arrow next next5" for="man2-3">〉</label>
+          <label class="arrow prev prev6" for="man2-2">〈</label>
+          <label class="arrow next next6" for="man2-1">〉</label>
+        </div>
+      </div>
+    </main>
+
+    <div class="action-container">
+      <a
+        href="https://open.kakao.com/o/s8J1hfBh"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="../images/kakaotalk.png" alt="카카오톡 아이콘"/>
+      </a>
+      <a href="#top" class="btn-top">
+        <img src="../images/Arrow_top.png" alt="맨 위로 가기 아이콘"/>
+      </a>
+    </div>
+
+    <footer>
+      <p class="titleFont">
+        서울시 구로구 경인로 445 동양미래호텔 | 02-2610-1700 |
+        hj_kim@bilab.co.kr | 김현정 <br/>© 2025 Hotel Group. All rights
+        reserved.
+      </p>
+    </footer>
+  </body>
+</html>

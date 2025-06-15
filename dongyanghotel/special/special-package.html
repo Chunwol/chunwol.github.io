@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>DongyangHotel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../css/globals.css"/>
+    <link rel="stylesheet" href="../css/fonts.css"/>
+    <link rel="stylesheet" href="../css/aside.css"/>
+    <link rel="stylesheet" href="../css/special.css"/>
+  </head>
+  <body>
+    <header id="top">
+      <div class="site-header">
+        <a href="../main/main.html">
+          <img src="../images/logo.png" alt="동양미래 호텔 로고" class="logo"/>
+        </a>
+        <div class="header-text nanumFont">
+          <h1>동양미래 호텔에 오신 것을 환영합니다</h1>
+          <p>
+            한국의 전통미와 현대적 감각을 겸비하고 있는 라이프스타일 호텔입니다.
+          </p>
+        </div>
+      </div>
+      <div class="nav-bar nanumFont">
+        <div class="nav-menu">
+          <a href="../about/about-intro.html">호텔소개</a>
+          <div class="dropdown-inner">
+            <a href="../about/about-intro.html">동양호텔소개</a>
+            <a href="../about/about-info.html">호텔정보</a>
+            <a href="../about/about-location.html">오시는길</a>
+          </div>
+        </div>
+
+        <div class="nav-menu">
+          <a href="../rooms/rooms-standard.html">객실소개</a>
+          <div class="dropdown-inner">
+            <a href="../rooms/rooms-standard.html">스탠다드</a>
+            <a href="../rooms/rooms-executive.html">이그제큐티브</a>
+            <a href="../rooms/rooms-suite.html">스위트</a>
+          </div>
+        </div>
+
+        <div class="nav-menu">
+          <a href="../facility/facility-dining.html">편의시설</a>
+          <div class="dropdown-inner">
+            <a href="../facility/facility-dining.html">다이닝</a>
+            <a href="../facility/facility-lifestyle.html">라이프스타일</a>
+            <a href="../facility/facility-wedding.html">웨딩 & 연회</a>
+          </div>
+        </div>
+
+        <div class="nav-menu">
+          <a href="../special/special-package.html">스페셜오퍼</a>
+          <div class="dropdown-inner">
+            <a href="../special/special-package.html">객실 패키지</a>
+            <a href="../special/special-event.html">이벤트</a>
+          </div>
+        </div>
+
+        <div class="nav-menu no-dropdown">
+          <a href="#popup">이용문의</a>
+          <div class="dropdown-inner"></div>
+        </div>
+        <div class="dropdown-bar"></div>
+      </div>
+    </header>
+
+    <div id="popup" class="overlay">
+      <div class="popup-box">
+        <a href="#" class="close">&times;</a>
+        <iframe
+          src="../inquiry/inquiry.html"
+          width="500px"
+          height="800px"
+          scrolling="no"
+          frameborder="0"
+          allowtransparency="true"
+          title="호텔 이용 문의"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <div class="container">
+      <aside>
+        <ul>
+          <li><p class="h3 bold">스페셜오퍼</p></li>
+          <li><a href="../special/special-package.html">> 객실 패키지</a></li>
+          <li><a href="../special/special-event.html">> 이벤트</a></li>
+        </ul>
+      </aside>
+
+      <main>
+        <div id="wrapper" class="titleFont" style="font-size: 20px">
+          <h2>객실 패키지</h2>
+          <hr/>
+
+          <div class="filter-wrapper">
+            <form class="search-form contentFont">
+              <!-- 기간 조회 -->
+              <div class="form-group">
+                <div class="control-wrapper">
+                  <input type="date" id="start-date" name="start-date"/>
+                  <span class="separator">~</span>
+                  <input type="date" id="end-date" name="end-date"/>
+                  <label class="group-label" for="start-date">기간 조회</label>
+                </div>
+              </div>
+              <!-- 유형 구분 -->
+              <div class="form-group">
+                <div class="control-wrapper">
+                  <select id="type" name="type">
+                    <option value="all">전체</option>
+                    <option value="breakfast">조식 포함</option>
+                    <option value="lounge">라운지 혜택</option>
+                    <option value="anniversary">기념일</option>
+                  </select>
+                  <label class="group-label" for="type">유형 구분</label>
+                </div>
+              </div>
+              <!-- 검색 버튼 -->
+              <button type="submit" class="btn-search">검색</button>
+              <!-- 키워드 -->
+              <div class="form-group2">
+                <div class="tag-list-wrapper">
+                  <div class="tag-list">
+                    <input
+                      type="checkbox"
+                      id="kw1"
+                      name="keyword"
+                      value="breakfast"
+                   /><label for="kw1">조식</label>
+                    <input
+                      type="checkbox"
+                      id="kw2"
+                      name="keyword"
+                      value="lounge"
+                   /><label for="kw2">라운지 혜택</label>
+                    <input
+                      type="checkbox"
+                      id="kw3"
+                      name="keyword"
+                      value="anniversary"
+                   /><label for="kw3">기념일</label>
+                    <input
+                      type="checkbox"
+                      id="kw4"
+                      name="keyword"
+                      value="pool"
+                   /><label for="kw4">야외수영장</label>
+                    <input
+                      type="checkbox"
+                      id="kw5"
+                      name="keyword"
+                      value="adult3"
+                   /><label for="kw5">성인 3인</label>
+                    <input
+                      type="checkbox"
+                      id="kw6"
+                      name="keyword"
+                      value="2nights"
+                   /><label for="kw6">2박 이상</label>
+                    <input
+                      type="checkbox"
+                      id="kw7"
+                      name="keyword"
+                      value="kids"
+                   /><label for="kw7">키즈</label>
+                  </div>
+                  <label class="group-label">키워드</label>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <p class="h6" style="margin-bottom: 5px">Total : 3</p>
+          <p></p>
+          <hr/>
+          <img src="../images/special/specialPackage1.jpg" class="img1"/>
+          <div class="special-details">
+            <h3>Exclusive Deluxe Stay</h3>
+            <p class="h6 details contentFont">2025-05-27 ~ 2025-06-30</p>
+            <p class="h5 details contentFont">더 이그제큐티브 라운지 입장</p>
+            <p class="h4 details contentFont">528,000 원 ~</p>
+            <div class="keyWord details"><p class="h6 contentFont">라운지 혜택</p></div>
+          </div>
+
+          <hr/>
+          <img src="../images/special/specialPackage2.jpg" class="img1"/>
+          <div class="special-details">
+            <h3>Memorable Moment</h3>
+            <p class="h6 details contentFont">2024-10-01 ~ 2025-08-31</p>
+            <p class="h5 details contentFont">
+              어번 아일랜드 All Day 입장 + 핑크 로즈 플라워 박스 + 커플 신라베어 1세트
+            </p>
+            <p class="h4 details contentFont">594,000 원 ~</p>
+            <div class="keyWord details contentFont"><p class="h6">기념일</p></div>
+          </div>
+          <hr/>
+          <img src="../images/special/specialPackage3.jpg" class="img1"/>
+          <div class="special-details">
+            <h3>Premium Cabana at Urban Island</h3>
+            <p class="h6 details contentFont">2025-03-14 ~ 2025-08-31</p>
+            <p class="h5 details contentFont">
+              어번 아일랜드 All Day 입장 + 카바나 F3~6 중 1동 이용 + 카바나 F&B
+              세트
+            </p>
+            <p class="h4 details contentFont">560,000 원 ~</p>
+            <div class="keyWord details contentFont"><p class="h6">야외수영장</p></div>
+          </div>
+
+          <hr/>
+        </div>
+      </main>
+    </div>
+
+    <div class="action-container">
+      <a
+        href="https://open.kakao.com/o/s8J1hfBh"
+        target="_blank"
+        rel="noopener"
+      >
+        <img src="../images/kakaotalk.png" alt="카카오톡 아이콘"/>
+      </a>
+      <a href="#top" class="btn-top">
+        <img src="../images/Arrow_top.png" alt="맨 위로 가기 아이콘"/>
+      </a>
+    </div>
+
+    <footer>
+      <p class="titleFont">
+        서울시 구로구 경인로 445 동양미래호텔 | 02-2610-1700 |
+        hj_kim@bilab.co.kr | 김현정 <br/>© 2025 Hotel Group. All rights
+        reserved.
+      </p>
+    </footer>
+  </body>
+</html>

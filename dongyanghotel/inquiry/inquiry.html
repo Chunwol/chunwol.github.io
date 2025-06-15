@@ -1,0 +1,128 @@
+<!doctype html>
+
+<head>
+  <link rel="stylesheet" href="../css/inquiry.css"/>
+</head>
+
+<div class="form-container contentFont">
+  <div class="form-header">
+    <h2>호텔 이용 문의</h2>
+    <p>이용 관련 문의 사항을 정성껏 답변 드리겠습니다</p>
+  </div>
+
+  <form
+    onsubmit="alert('문의가 성공적으로 접수되었습니다.\n1~2 영업일 이내에 답변 드리겠습니다.');"
+  >
+    <div class="form-group">
+      <label for="title">제목</label>
+      <input
+        id="title"
+        name="title"
+        type="text"
+        placeholder="제목을 입력해주세요"
+        required
+     />
+    </div>
+
+    <div class="form-group">
+      <label for="type">문의 유형</label>
+      <select id="type" name="type" required>
+        <option value="" disabled selected>유형을 선택해주세요</option>
+        <option value="예약">예약</option>
+        <option value="취소/변경">취소/변경</option>
+        <option value="기타">기타</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="name">성함</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="성함을 입력해주세요"
+        required
+     />
+    </div>
+
+    <div class="form-group phone">
+      <label for="phone1">연락처</label>
+      <select id="phone1" name="phone1" required>
+        <option value="010">010</option>
+        <option value="011">011</option>
+        <option value="016">016</option>
+        <option value="017">017</option>
+        <option value="018">018</option>
+        <option value="019">019</option>
+      </select>
+      <span class="sep">-</span>
+      <input
+        id="phone2"
+        name="phone2"
+        type="text"
+        pattern="\d{3,4}"
+        maxlength="4"
+        placeholder="1234"
+        required
+        title="숫자 3~4자리만 입력 가능합니다."
+     />
+      <span class="sep">-</span>
+      <input
+        id="phone3"
+        name="phone3"
+        type="text"
+        pattern="\d{3,4}"
+        maxlength="4"
+        placeholder="5678"
+        required
+        title="숫자 3~4자리만 입력 가능합니다."
+     />
+    </div>
+
+    <div class="form-group email">
+      <label for="email1">이메일주소</label>
+      <input
+        id="email1"
+        name="email1"
+        type="text"
+        placeholder="example"
+        required
+     />
+      <span class="sep">@</span>
+      <input
+        id="emailDomain"
+        name="emailDomain"
+        list="domain-list"
+        placeholder="도메인주소 입력"
+        required
+     />
+      <datalist id="domain-list">
+        <option value="gmail.com"></option>
+        <option value="naver.com"></option>
+        <option value="daum.net"></option>
+      </datalist>
+    </div>
+
+    <div class="form-group">
+      <label for="message">문의 내용</label>
+      <textarea
+        id="message"
+        name="message"
+        placeholder="문의 내용을 입력해주세요"
+        required
+      ></textarea>
+    </div>
+
+    <div class="form-group file">
+      <label for="file">파일첨부</label>
+      <input id="file" name="file" type="file"/>
+    </div>
+
+    <div class="form-group checkbox">
+      <input id="agree" type="checkbox" required/>
+      <label for="agree">개인정보 수집 항목에 동의합니다</label>
+    </div>
+
+    <button type="submit" class="btn-submit">문의하기</button>
+  </form>
+</div>

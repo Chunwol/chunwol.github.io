@@ -1,0 +1,35 @@
+body {
+  background-image: url("../images/background/backgroundImage3.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#wrapper {
+  background-color: rgb(255, 255, 255, 0.9);
+  background-position: center;
+  max-width: 1000px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgb(12, 19, 80);
+  padding: 50px;
+}
+
+.img1 {
+  float: left;
+  width: 300px;
+  height: 200px;
+  margin: 20px 20px 20px 0;
+}
+
+.facility-details {
+  display: inline-block;
+  vertical-align: top;
+  width: 580px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+hr {
+  clear: both;
+}

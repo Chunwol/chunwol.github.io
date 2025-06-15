@@ -1,0 +1,192 @@
+body {
+  background-image: url("../images/background/backgroundImage2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  display: block;
+  max-width: 1000px;
+}
+
+#wrapper {
+  background-color: rgb(255, 255, 255, 0.9);
+  background-position: center;
+  max-width: 1000px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: rgb(12, 19, 80);
+  padding-bottom: 50px;
+}
+
+main div h1 {
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+
+.slider.auto {
+  position: relative;
+  overflow: hidden;
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+
+.slider.auto .slides {
+  position: relative;
+  width: 400%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  left: 0;
+  animation: slide 12s infinite;
+}
+
+.slider.auto .slides li {
+  float: left;
+  width: 25%;
+}
+
+.slider.auto .slides img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes slide {
+  0%,
+  16.667% {
+    left: 0%;
+  }
+  25%,
+  41.667% {
+    left: -100%;
+  }
+  50%,
+  66.667% {
+    left: -200%;
+  }
+  75%,
+  100% {
+    left: -300%;
+  }
+}
+
+.manual-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  margin-bottom: 50px;
+}
+.manual-slider input {
+  display: none;
+}
+.manual-slider .viewport {
+  overflow: hidden;
+}
+.manual-slider .slides {
+  position: relative;
+  width: 300%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  left: 0;
+  transition: left 0.5s ease;
+}
+.manual-slider .slides li {
+  float: left;
+  width: 33.3333%;
+}
+.manual-slider .slides img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.manual-slider .nav-dots {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+}
+.manual-slider .nav-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#man1-1:checked ~ .nav-dots label[for="man1-1"],
+#man1-2:checked ~ .nav-dots label[for="man1-2"],
+#man1-3:checked ~ .nav-dots label[for="man1-3"],
+#man2-1:checked ~ .nav-dots label[for="man2-1"],
+#man2-2:checked ~ .nav-dots label[for="man2-2"],
+#man2-3:checked ~ .nav-dots label[for="man2-3"] {
+  background: rgba(255, 255, 255, 1);
+}
+
+.manual-slider .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+.manual-slider .arrow.prev {
+  left: 10px;
+}
+.manual-slider .arrow.next {
+  right: 10px;
+}
+
+#man1-1:checked ~ .viewport .slides {
+  left: 0;
+}
+#man1-2:checked ~ .viewport .slides {
+  left: -100%;
+}
+#man1-3:checked ~ .viewport .slides {
+  left: -200%;
+}
+#man2-1:checked ~ .viewport .slides {
+  left: 0;
+}
+#man2-2:checked ~ .viewport .slides {
+  left: -100%;
+}
+#man2-3:checked ~ .viewport .slides {
+  left: -200%;
+}
+
+#man1-1:checked ~ .arrow.prev1,
+#man1-1:checked ~ .arrow.next1,
+#man1-2:checked ~ .arrow.prev2,
+#man1-2:checked ~ .arrow.next2,
+#man1-3:checked ~ .arrow.prev3,
+#man1-3:checked ~ .arrow.next3 {
+  display: block;
+}
+
+#man2-1:checked ~ .arrow.prev4,
+#man2-1:checked ~ .arrow.next4,
+#man2-2:checked ~ .arrow.prev5,
+#man2-2:checked ~ .arrow.next5,
+#man2-3:checked ~ .arrow.prev6,
+#man2-3:checked ~ .arrow.next6 {
+  display: block;
+}
