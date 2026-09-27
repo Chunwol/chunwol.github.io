@@ -4,7 +4,7 @@ article[data-astro-cid-yq2gsstb]{padding-block:clamp(40px,7vw,80px)}.head[data-a
 <p>새 Codex·Claude 채팅에서도 이전 프로젝트의 목적, 결정, 실패 원인과 다음 작업을 빠르게 가져오기 위해 만든 로컬 지식 시스템입니다. 원문을 단순히 쌓는 데서 끝내지 않고, 프로젝트별 브리프와 결정 기록, 문제 해결 절차, 작업 세션으로 연결합니다.</p>
 <img src="/notes-assets/project/knowledge-hub/2026-09-04-obsidian-home.png" alt="Obsidian KnowledgeHub 홈 화면" loading="lazy" />
 <p>홈에서는 프로젝트 브리프, 문제 해결 지도, 인프라·계정 안내, 이전 대화와 최근 세션으로 바로 이동할 수 있습니다.</p>
-<p>2026년 9월의 고정된 검토 manifest 기준으로 접근 가능한 172개 세션과 54,016개 메시지를 수집했고, 중복을 제거한 31,713개 검토 단위와 원래 세션 위치의 연결을 보존했습니다. 온라인에만 있고 로컬에 남지 않은 대화까지 수집했다고 주장하지 않습니다.</p>
+<p>2026년 9월 기준으로 로컬에 남아 있는 172개 세션과 54,016개 메시지를 모았습니다. 중복을 정리한 31,713개 검토 단위에서도 원래 세션과 메시지 위치를 바로 찾을 수 있게 연결했습니다. 클라우드에만 남아 있는 대화는 추후 내보내기를 확보할 때 추가할 예정입니다.</p>
 <h2 id="지식-구조">지식 구조</h2>
 <table>
 <thead>
@@ -39,13 +39,13 @@ article[data-astro-cid-yq2gsstb]{padding-block:clamp(40px,7vw,80px)}.head[data-a
 <h2 id="구현">구현</h2>
 <p>Python 표준 라이브러리와 SQLite로 대화 원문을 가져오고 검색 인덱스를 구성했습니다. Codex, Claude Code, Claude Desktop/Cowork처럼 출처가 다른 기록을 세션 ID로 구분하고, 하위 에이전트 로그와 중복된 이관 기록이 성과로 다시 집계되지 않도록 분리합니다.</p>
 <p>프로젝트 검색은 정제된 브리프와 해결 절차를 먼저 보여 주고, 더 구체적인 근거가 필요할 때만 원문으로 내려갑니다. 공유용 내보내기는 프로젝트와 관련된 공개 가능 노트만 선택하며, 알려진 토큰·개인키 패턴을 마스킹합니다. 백업 도구는 보관함 밖에 ZIP을 만들고 생성 후 무결성을 검사하도록 구성했습니다.</p>
-<h2 id="운영-원칙">운영 원칙</h2>
+<h2 id="정리-방식">정리 방식</h2>
 <ul>
-<li>완료, 진행, 실패, 미확인을 구분하고 빌드 성공을 실제 배포 성공으로 바꾸어 쓰지 않습니다.</li>
-<li>같은 원격 저장소의 여러 checkout을 중복 프로젝트로 세지 않습니다.</li>
-<li>팀 저장소의 기능과 개인 기여를 분리하고, 공개 GitHub·문서·실행 결과를 근거로 연결합니다.</li>
-<li>비밀번호, 토큰, 내부 주소와 원문 대화는 포트폴리오 콘텐츠로 내보내지 않습니다.</li>
-<li>여러 기기 동기화는 현재 범위에서 제외하고 로컬 Markdown과 검증 가능한 백업을 우선합니다.</li>
+<li>빌드, 배포, 실제 운영 상태를 나눠 기록합니다.</li>
+<li>같은 저장소에서 만든 여러 checkout은 하나의 프로젝트로 묶습니다.</li>
+<li>팀 전체 기능과 제가 맡은 작업을 구분해 정리합니다.</li>
+<li>비밀번호, 토큰, 내부 주소와 원문 대화는 공개 자료에서 자동으로 제외합니다.</li>
+<li>지금은 로컬 Markdown과 ZIP 백업을 사용하고, 여러 기기 동기화는 필요할 때 연결할 계획입니다.</li>
 </ul>
 <p>이 사이트 자체도 이 구조에서 공개 대상으로 선택한 프로젝트와 글을 가져와 빌드할 수 있도록 설계했습니다. 지식 보관과 공개 포트폴리오 사이에 명시적인 공개 범위를 두는 것이 핵심입니다.</p>
 </div><p class="visually-hidden" data-astro-cid-yq2gsstb>기술: Obsidian, Markdown, Python, SQLite, PowerShell</p><nav class="next" aria-label="다음 프로젝트" data-pagefind-ignore data-astro-cid-yq2gsstb><span data-astro-cid-yq2gsstb>다음 프로젝트</span><a href="/projects/school-intranet/" data-astro-cid-yq2gsstb>교내 인트라넷 백엔드</a></nav></article></main><footer class="site-footer" data-astro-cid-jo6i4kqk><div class="wrap row" data-astro-cid-jo6i4kqk><p data-astro-cid-jo6i4kqk>© 2026 임석현</p><ul data-astro-cid-jo6i4kqk><li data-astro-cid-jo6i4kqk><a href="https://github.com/chunwol" data-astro-cid-jo6i4kqk>GitHub</a></li><li data-astro-cid-jo6i4kqk><a href="mailto:chunwol@kakao.com" data-astro-cid-jo6i4kqk>Email</a></li><li data-astro-cid-jo6i4kqk><a href="/rss.xml" data-astro-cid-jo6i4kqk>RSS</a></li></ul></div></footer><dialog id="search" class="search" aria-label="사이트 검색" data-astro-cid-e66w4awt><div class="panel" data-astro-cid-e66w4awt><div class="field" data-astro-cid-e66w4awt><svg width="17" height="17" viewBox="0 0 16 16" aria-hidden="true" data-astro-cid-e66w4awt><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6" data-astro-cid-e66w4awt></circle><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" data-astro-cid-e66w4awt></path></svg><input type="search" placeholder="글, 프로젝트, 기술 이름으로 찾기" autocomplete="off" spellcheck="false" aria-label="검색어" aria-controls="search-results" data-astro-cid-e66w4awt><button type="button" class="close" data-close aria-label="검색 닫기" data-astro-cid-e66w4awt><kbd data-astro-cid-e66w4awt>Esc</kbd></button></div><div class="filters" role="group" aria-label="검색 범위" data-astro-cid-e66w4awt><button type="button" data-filter="" aria-pressed="true" data-astro-cid-e66w4awt>전체</button><button type="button" data-filter="글" aria-pressed="false" data-astro-cid-e66w4awt>글</button><button type="button" data-filter="프로젝트" aria-pressed="false" data-astro-cid-e66w4awt>프로젝트</button></div><p class="status" data-status aria-live="polite" data-astro-cid-e66w4awt></p><ol id="search-results" class="results" data-results data-astro-cid-e66w4awt></ol></div></dialog><script type="module" src="/_astro/SearchDialog.astro_astro_type_script_index_0_lang.D-lZkbaG.js"></script><script type="module" src="/_astro/Base.astro_astro_type_script_index_0_lang.mYKv6RU-.js"></script></body></html>
