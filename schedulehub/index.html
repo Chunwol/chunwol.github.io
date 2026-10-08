@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F7F8FC">
+  <meta name="description" content="일정모아 · 캘린더와 활동을 직접 눌러 보는 웹 데모">
+  <title>일정모아 · 웹 데모</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="domain.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="데스크톱 탐색">
+      <a class="brand" href="#calendar"><span class="brand-mark" aria-hidden="true"></span>일정모아</a>
+      <p class="brand-copy">흩어진 일정이 모이는 곳.</p>
+      <div class="workspace-tag"><span></span> 인터랙티브 웹 데모</div>
+      <nav id="desktop-nav" aria-label="주 메뉴"></nav>
+      <button class="primary new-button" data-action="intake"><i class="icon" data-icon="add"></i> 새 일정 등록</button>
+      <div class="sidebar-bottom">
+        <button class="side-link" data-action="navigate" data-route="widgets"><i class="icon" data-icon="calendar_month"></i> 위젯 미리보기</button>
+        <button class="side-link" data-action="navigate" data-route="settings"><i class="icon" data-icon="settings"></i> 설정 및 데모 안내</button>
+        <span class="version">SCHEDULEHUB <span>v70h · WEB</span></span>
+      </div>
+    </aside>
+    <main class="app-shell" id="app-shell">
+      <header class="app-header" id="app-header"></header>
+      <div class="screen" id="screen"></div>
+      <nav class="bottom-nav" id="bottom-nav" aria-label="모바일 주 메뉴"></nav>
+    </main>
+    <aside class="context-panel" aria-label="웹 데모 안내">
+      <div class="context-heading">한눈에, 내 일정 <span>10.08 목</span></div>
+      <div id="desktop-widget"></div>
+      <div class="guide">
+        <span class="eyebrow">TRY IT OUT</span>
+        <h2>화면을 눌러<br>직접 사용해 보세요.</h2>
+        <p>날짜를 고르고, 일정을 수정하고.<br>여러 일정을 하나의 활동으로 묶어요.</p>
+        <button class="guide-link" data-action="navigate" data-route="activity/campus">공모전 일정 살펴보기 <span>↗</span></button>
+        <button class="guide-link" data-action="sample">예제 안내문으로 등록하기 <span>↗</span></button>
+        <button class="guide-link" data-action="navigate" data-route="widgets">세 가지 위젯 둘러보기 <span>↗</span></button>
+      </div>
+      <div class="privacy-note"><i class="icon" data-icon="check"></i><p>입력 내용은 이 브라우저에만 저장돼요.<br>실제 OCR·AI, 기기 알림은 연결하지 않았어요.</p></div>
+      <a class="source-link" href="https://www.figma.com/design/4zb7SXITv6qvw0pVDQp3Zn?node-id=3-2" target="_blank" rel="noopener">원본 Figma 화면 보기 ↗</a>
+    </aside>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-body"></div></dialog>
+  <input id="attachment-input" type="file" hidden accept="image/*,.pdf,.txt,.doc,.docx,.hwp,.hwpx">
+  <input id="camera-input" type="file" hidden accept="image/*" capture="environment">
+  <noscript>이 데모를 사용하려면 JavaScript를 켜 주세요.</noscript>
+</body>
+</html>
